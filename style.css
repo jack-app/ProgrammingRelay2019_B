@@ -1,0 +1,23 @@
+.sample{
+  background-color: pink;
+    float: left;
+    border-right: : solid 1px #fff;
+}
+
+.input{
+  background-color: blue;
+  float: left;
+}
+
+.terminal{
+  background-color: yellow;
+  height: 25vh;
+}
+
+.a{
+  height: 75vh;
+}
+
+.b{
+  border-bottom: solid 1px #fff;
+}
