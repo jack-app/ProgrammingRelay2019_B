@@ -1,24 +1,54 @@
-.sample{
-  background-color: pink;
-    float: left;
-    border-right: : solid 1px #fff;
+.box-left{
+  background-color: #191c20;
+  float: left;
+  overflow: hidden;
+  border-right: solid 2px #131418;
 }
 
-.input{
-  background-color: blue;
-  color: white;
+.box-right{
+  background-color: #191c20;
   float: left;
+  border-right: : solid 1px #fff;
+  float:left;
+  overflow: hidden;
 }
 
 .terminal{
-  background-color: yellow;
+  background-color: black;
+  color: white;
   height: 25vh;
 }
 
-.a{
+.top-section{
   height: 75vh;
 }
 
 .b{
-  border-bottom: solid 1px #fff;
+  border-bottom: solid 2px #131418;
+}
+
+.count{
+  margin: 0;
+  float: left;
+  background-color: #1e2127;
+  border-right: solid 2px #131418;
+  color:#969eac;
+  text-align: center;
+}
+
+.blank{
+    margin: 0;
+    color: rgba(0, 0, 0, 0);
+}
+
+.sample, .input{
+  background-color: #1e2127;
+  color:#969eac;
+}
+
+.stick{
+  height: 40px;
+  background-color: #191c20;
+  border: solid 1px #131418;
+  color:#969eac;
 }
