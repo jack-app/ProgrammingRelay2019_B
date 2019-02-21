@@ -1,5 +1,5 @@
 var QUESTION = [
-//  ['printf("Hello World!");', "Hello World!"],
-["asd","asdf"],
-  ['for (var i = 0; i < array.length; i++) {<br>}',""]
+  ["asd", "asd", ".txt"],
+  ['printf("Hello World!");', "Hello World!", ".c"],
+  ['for (var i = array.length; i > 0; i--) {<br>}', "", ".js"]
 ];
