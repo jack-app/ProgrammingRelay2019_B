@@ -1,6 +1,6 @@
 function onload() {
-  // var sample = document.getElementById('sample');
-  // sample.innerHTML = 'a = 0'
+  var sample = document.getElementById('sample');
+  sample.innerHTML = QUESTION[0][0];
 }
 
 var isShift = false
