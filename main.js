@@ -1,9 +1,14 @@
-function onload() {
-  var sample = document.getElementById('sample');
-  sample.innerHTML = QUESTION[0][0];
+var qNum
+
+function showQuestion() {
+  var text = document.getElementById('sample');
+  console.log(text.innerHTML);
+  qNum = Math.floor(Math.random() * 2)
+  text.innerHTML = QUESTION[qNum][0];
 }
 
-var isShift = false
+var isShift = false;
+var isControll = false;
 var numCode = [["0", "!", '"', "#", "$", "%", "&", "'", "(", ")"],["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]]
 
 function keydown(){
@@ -25,7 +30,12 @@ function keydown(){
     }
   // 改行
   } else if(event.keyCode == 13) {
-    target.innerHTML += '<br>'
+    if (isControll) {
+      check(qNum, target.innerHTML)
+
+    }else {
+      target.innerHTML += '<br>'
+    }
   // バックスペース
   } else if(event.keyCode == 8) {
     var str = target.innerHTML;
@@ -38,24 +48,43 @@ function keydown(){
       target.innerHTML = str.substring(0, str.length-1);
     }
   // Shift
-  } else if(event.keyCode == 16) {
+  } else if (event.keyCode == 16) {
     isShift = true;
+  //Controll
+  }else if (event.keyCode == 17) {
+    isControll = true;
+
   // ;
-  } else if(event.keyCode == 186) {
+  }else if (event.keyCode == 186) {
     target.innerHTML += ";";
   // その他
   } else {
   }
 }
 
-function keyup(){
+function keyup() {
   console.log(event.keyCode + ":up")
   if (event.keyCode == 16){
     isShift = false;
   }
+  else if (event.keyCode == 17) {
+    isControll = false;
+  }
+}
+//答えチェック
+function check(qNum, answer){
+  console.log(QUESTION[qNum][0])
+  console.log(answer.substring(9))
+  target = document.getElementById("terminal");
+  if (QUESTION[qNum][0] == answer.substring(9)) {
+
+      target.innerHTML = QUESTION[qNum][1]
+  }else {
+    target.innerHTML = "error"
+  }
 }
 
-window.onload = onload
+window.onload = showQuestion
 
 document.onkeydown = keydown
 document.onkeyup = keyup
